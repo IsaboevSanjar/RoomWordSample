@@ -7,7 +7,7 @@ class WordRepository(private val dao: WordDao) {
     val allWords: Flow<List<Word>> = dao.getAlphabetizedWords()
 
     @WorkerThread
-    suspend fun insert(word: Word) {
+    fun insert(word: Word) {
         dao.insert(word)
     }
 }
