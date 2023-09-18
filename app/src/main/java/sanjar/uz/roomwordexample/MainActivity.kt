@@ -7,9 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
     private val newWordActivityRequestCode = 1
-    private val wordViewModel: WordViewModel by viewModels {
-        WordViewModelFactory((application as WordsApp).repository)
-    }
+    
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
